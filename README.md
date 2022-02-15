@@ -46,3 +46,10 @@ For example:
 We create a new file as just explained, name it "Sender.h" and paste the "Sender.h" file to it. 
 It's as simple as that.
 
+Finally, we adapted the "LoRaReceiver" program with our:
+
+-Wifi name (ssid)
+
+-Password
+
+-The IP address of the raspberry that we are using (mqtt_server)
