@@ -4,7 +4,12 @@ A device that works with TTGO v1 storing the information it receives from variou
 # Procedure
 To make easier the process of making this project, we have divided it in different parts. 
 
+## Materials
+
+## Steps
+
 ## Connections
+
 
 ## Program
 
