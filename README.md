@@ -21,15 +21,15 @@ To carry out this project we have used the following materials:
 
 · ESP32 TTGO
 
-### Computer used to see the information
+### Computer used to see the information:
 
 · Raspberry Pi 4
 
-### Software used for programming
+### Software used for programming:
 
 · Arduino IDE
 
-### A part
+### A part:
 
 · 2 LEDS
 
