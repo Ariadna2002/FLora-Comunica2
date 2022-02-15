@@ -7,7 +7,7 @@ To make easier the process of making this project, we have divided it in differe
 ## Materials
 To carry out this project we have used the following materials:
 
-Sensors:
+### Sensors:
 
 · KY-026 fire sensor
 
@@ -15,7 +15,7 @@ Sensors:
 
 · Flying Fish gas sensor
 
-Modules:
+### Modules:
 
 · ESP32 Lilygo TTGO
 
