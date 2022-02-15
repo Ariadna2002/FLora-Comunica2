@@ -5,11 +5,20 @@ A device that works with TTGO v1 storing the information it receives from variou
 To make easier the process of making this project, we have divided it in different parts. 
 
 ## Materials
+To carry out this project we have used the following materials:
 
-## Steps
+Sensors:
+· KY-026 fire sensor
+· GY-BMEP280 temperature/humidity/pressure sensor
+· Flying Fish gas sensor
+
+Modules:
+· ESP32 Lilygo TTGO
+· ESP32 TTGO
 
 ## Connections
 
+## Steps
 
 ## Program
 
