@@ -29,6 +29,15 @@ To carry out this project we have used the following materials:
 
 · Arduino IDE
 
+### A part
+
+· 2 LEDS
+
+· PCB
+
+· 3D Printer
+
+
 ## Connections
 
 ## Steps
