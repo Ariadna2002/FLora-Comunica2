@@ -3,4 +3,4 @@ A device that works with TTGO v1 storing the information it receives from variou
 
 # Procedure
 
-# connections
+# Connections
