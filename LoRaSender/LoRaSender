@@ -1,0 +1,247 @@
+
+//Libraries for LoRa
+#include <SPI.h>
+#include <LoRa.h>
+
+//Libraries for OLED Display
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+//Libraries for BME280
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BME280.h>
+
+//define the pins used by the LoRa transceiver module
+#define SCK 5
+#define MISO 19
+#define MOSI 27
+#define SS 18
+#define RST 14
+#define DIO0 26
+
+//433E6 for Asia
+//866E6 for Europe
+//915E6 for North America
+#define BAND 866E6
+
+//OLED pins
+#define OLED_SDA 4
+#define OLED_SCL 15
+#define OLED_RST 16
+#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_HEIGHT 64 // OLED display height, in pixels
+
+//BME280 definition
+#define SDA 21
+#define SCL 22
+
+#define SEALEVELPRESSURE_HPA (1036)
+
+//LED aktuadorea
+#define LEDC_CHANNEL_0     0
+#define LEDC_TIMER_13_BIT  13
+#define LEDC_BASE_FREQ     5000
+#define LED_PIN            2
+
+
+TwoWire I2Cone = TwoWire(1);  //  I2C komunikazioa egiteko
+Adafruit_BME280 bme;         //   I2C komunikazioa erabiliko dugula sentsoreari esan
+//Adafruit_BME280 bme(BME_CS, BME_MOSI, BME_MISO, BME_SCK); // software SPI
+//packet counter
+int readingID = 0;
+
+const int analogPinG = 13; // GAS
+const int analogPin = 25; // KY-026 
+
+int counter = 0;
+int Flame = 0;
+int Gas = 0;
+int brightness = 255;
+int brightness1 = 0;
+int denb_act;
+int tarte_denb;
+int denb_ant = 0;
+
+String LoRaMessage = "";
+String recv1 = "";
+
+float Temperature = 0;
+float Humidity = 0;
+float Pressure = 0;
+float Altitude = 0;
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST);
+
+//Initialize OLED display
+void startOLED() {
+  //reset OLED display via software
+  pinMode(OLED_RST, OUTPUT);
+  digitalWrite(OLED_RST, LOW);
+  delay(20);
+  digitalWrite(OLED_RST, HIGH);
+
+  //initialize OLED
+  Wire.begin(OLED_SDA, OLED_SCL);
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3c, false, false)) { // Address 0x3C for 128x32
+    Serial.println(F("SSD1306 allocation failed"));
+    for (;;); // Don't proceed, loop forever
+  }
+  display.clearDisplay();
+  display.setTextColor(WHITE);
+  display.setTextSize(1);
+  display.setCursor(0, 0);
+  display.print("LORA SENDER");
+}
+
+//Initialize LoRa module
+void startLoRA() {
+  SPI.begin(SCK, MISO, MOSI, SS);
+  //setup LoRa transceiver module
+  LoRa.setPins(SS, RST, DIO0);
+
+  if (!LoRa.begin(BAND)) {
+    Serial.println("Starting LoRa failed!");
+    while (1);
+  }
+}
+
+void startBME() {    //BME sentsorea aktibatu
+  I2Cone.begin(SDA, SCL, uint32_t (100000));
+  bool status = bme.begin(0x76, &I2Cone);
+
+  if (!status) {
+    Serial.println("Could not find a valid BME280_1 sensor, check wiring!");
+    while (1);
+  }
+}
+
+void getReadings() {    //  Neurriak hartu eta Serial-era bidali
+
+
+  Temperature = bme.readTemperature();
+  Humidity = bme.readHumidity();
+  Pressure = bme.readPressure() / 100.0F;
+  Altitude = bme.readAltitude(SEALEVELPRESSURE_HPA);
+  Flame = analogRead(analogPin);
+  Gas = analogRead(analogPinG);
+
+  Serial.print("Temperature = ");
+  Serial.print(Temperature);
+  Serial.println(" *C");
+
+  Serial.print("Pressure = ");
+  Serial.print(Pressure);
+  Serial.println(" hPa");
+
+  Serial.print("Approx. Altitude = ");
+  Serial.print(Altitude);
+  Serial.println(" m");
+
+  Serial.print("Humidity = ");
+  Serial.print(Humidity);
+  Serial.println(" %");
+
+  Serial.print("Flame = ");
+  Serial.print(Flame);
+  Serial.println("%");
+
+  Serial.print("Gas = ");
+  Serial.print(Gas, DEC);
+  Serial.println(" %");
+
+  Serial.print("Sending packet: ");
+  Serial.println(readingID);
+  readingID++;
+  Serial.println("-----------------");
+  Serial.println("");
+
+
+
+}
+
+void sendReadings() {    // LoRa mezua sortu, bidali eta Display-ean agertu
+  LoRaMessage = String(Temperature) + "/" + String(Humidity) + "&" + String(Pressure) + "#" + String(Altitude) + "%" + String(Flame) + "$" + String(Gas) + "!";
+
+
+  //Send LoRa packet to receiver
+  LoRa.beginPacket();
+  LoRa.print(LoRaMessage);
+  LoRa.endPacket();
+
+  display.clearDisplay();
+  display.setCursor(0, 0);
+  display.print("Temp: ");
+  display.println(Temperature);
+  display.print("Humd: ");
+  display.println(Humidity);
+  display.print("Pres: ");
+  display.println(Pressure);
+  display.print("Altd: ");
+  display.println(Altitude);
+  display.print("Flam: ");
+  display.println(Flame);
+  display.print("Gas: ");
+  display.println(Gas);
+  display.display();
+
+
+}
+
+// LED-a aktibatu
+void ledcAnalogWrite(uint8_t channel, uint32_t value, uint32_t valueMax = 255) {
+
+  uint32_t duty = (8191 / valueMax) * min(value, valueMax);
+
+  ledcWrite(channel, duty);
+}
+
+void received() {  // Ailegatzen zaizkigun mezuak jaso, gure kasuan "Bidalita"
+
+  int packetSize = LoRa.parsePacket();
+  //  Serial.println(packetSize);
+  if (packetSize) {
+    // received a packet
+    String recv = "";
+    // read packet
+    while (LoRa.available()) {
+      recv += LoRa.readString();
+      Serial.println(recv);
+    }
+    String dev = recv.substring(0, 8);
+    if (dev.equals("Bidalita"))
+    {
+      Serial.println("Gorabehera berrikusita");
+      ledcAnalogWrite(LEDC_CHANNEL_0, brightness1);
+    }
+  }
+}
+
+void setup() {
+  ledcSetup(LEDC_CHANNEL_0, LEDC_BASE_FREQ, LEDC_TIMER_13_BIT);
+  ledcAttachPin(LED_PIN, LEDC_CHANNEL_0);
+  Serial.begin(115200);
+  startOLED();
+  startBME();
+  startLoRA();
+}
+
+void loop() {
+
+  if ((Flame == 0) or (Flame < 100)) {
+    ledcAnalogWrite(LEDC_CHANNEL_0, brightness);
+  }
+
+  denb_act = millis();
+  tarte_denb = denb_act - denb_ant;
+
+  if (tarte_denb > 5000)
+  {
+    denb_ant = millis();
+
+    getReadings();
+    sendReadings();
+  }
+  received();
+
+}
