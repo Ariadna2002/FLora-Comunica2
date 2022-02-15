@@ -21,10 +21,22 @@ To carry out this project we have used the following materials:
 
 · ESP32 TTGO
 
+### Computer used to see the information
+
+· Raspberry Pi 4
+
+### Software used for programming
+
+· Arduino IDE
+
 ## Connections
 
 ## Steps
+1-First of all we must make the connections found in the attached "Schematic" file above. For the program to work it must detect the BMEP280 sensor.
 
+2-The second thing to do is to load the "LoRaSender" program in our TTGO with the connections already made.
+
+3-
 ## Program
 
 ## PCB designs
