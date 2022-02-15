@@ -8,11 +8,13 @@ To make easier the process of making this project, we have divided it in differe
 To carry out this project we have used the following materials:
 
 Sensors:
+
 · KY-026 fire sensor
 · GY-BMEP280 temperature/humidity/pressure sensor
 · Flying Fish gas sensor
 
 Modules:
+
 · ESP32 Lilygo TTGO
 · ESP32 TTGO
 
