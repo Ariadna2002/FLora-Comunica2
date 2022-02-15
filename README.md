@@ -5,3 +5,7 @@ A device that works with TTGO v1 storing the information it receives from variou
 To make easier the process of making this project, we have divided it in different parts. 
 
 ## Connections
+
+## Program
+
+## PCB designs
