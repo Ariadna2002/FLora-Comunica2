@@ -53,3 +53,5 @@ Finally, we adapted the "LoRaReceiver" program with our:
 -Password
 
 -The IP address of the raspberry that we are using (mqtt_server)
+
+These are the steps to be followed only for the complete operation of the project. If you would like to add a PCB and a 3D design of a housing for this project, we have left the files for you to download. 
