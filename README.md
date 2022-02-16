@@ -58,12 +58,11 @@ Once we have installed, we have to enter in the google browser the ip of the ras
 
 Every node must be also configured. 
 
-## Assembly of the transmitter
+## Configuration of the modules
 
 Following the diagram in the connection section, we will connect all the sensors and both leds to the TTGO. For the program to work it must detect the BME280 sensor. Then we will load the program [LoraSender](https://github.com/Ariadna2002/FLora-Comunica2/tree/main/LoRaSender). Once the program is on the TTGO board, it shouldn't work, because the Receiver is not configured yet.
 
-
-
+Then, we will load the 4 parts of the [LoraReceiver](https://github.com/Ariadna2002/FLora-Comunica2/tree/main/LoRaReceiver) program in our Lilygo TTGO. In order to work, we must create four files in our Arduino IDE and paste the programs attached above with the exact names.  To do this Arduino IDE we will find an arrow at the top right, just below the serial monitor icon (a magnifying glass), and click "New tab". Then we will write the names as they are in the previously shared files. It should look like this. 
 
 # Procedure
 
