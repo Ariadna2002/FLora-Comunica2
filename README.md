@@ -1,5 +1,10 @@
 # Project definition
 A device that works with TTGO v1 storing the information it receives from various sensors, and sending the data via LoRa to a raspberry server that has nodered. 
+![ProjectWithNoCase](https://github.com/Ariadna2002/FLora-Comunica2/blob/main/Images/ProjectWithNoCase.jpeg)
+
+This project is composed of two "blocks", the first one a pcb with 3 sensors connected to a TTGO, and the second one a Lilygo connected to a raspberry. Both are transreceivers, since the TTGO sends the information it collects from the sensors and sends it to the lilygo board, but also receives information from it to use its actuators, which in our case is a led that can be turned off remotely from the nodered GUI.
+
+This repository contains all the information needed to make both transreceivers.
 
 # Materials
 To carry out this project we have used the following materials:
@@ -14,13 +19,11 @@ To carry out this project we have used the following materials:
 
 · [Gas sensor](https://www.smart-prototyping.com/MQ-9-carbon-monoxide,-combustible-gas-sensor-detection-alarm-module.html)
 
-## Modules:
-
-· ESP32 Lilygo TTGO
-
 · ESP32 TTGO
 
-## Computer used to see the information:
+## Receiver:
+
+· ESP32 Lilygo TTGO
 
 · Raspberry Pi 4
 
@@ -30,8 +33,7 @@ To carry out this project we have used the following materials:
 
 · [Proteus](https://componentsearchengine.com/library/proteus?gclid=Cj0KCQiA3rKQBhCNARIsACUEW_aY6RcRdgSPUMMehsdv-Bzp3LncFmYT_sYbc0FBilARIvG0W2LUSLcaAgRlEALw_wcB)
 
-
-# Connections
+# Connections of the transmitter
 ![Image1](https://github.com/Ariadna2002/FLora-Comunica2/blob/main/Schematic.png)
 
 # Procedure
