@@ -40,6 +40,8 @@ To carry out this project we have used the following materials:
 
 ## Connections
 
+https://github.com/Ariadna2002/FLora-Comunica2/blob/main/Schematic.png
+
 ## Steps
 
 1-The first thing we must do is the installation and programming in NodeRed because if we do not have the programming part done the receiver will not receive any data because it will not be connected to the raspberry (by MQTT) and will give us a failed message. To do this we will follow the steps in the "NodeRed" folder.
