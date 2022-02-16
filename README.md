@@ -1,13 +1,10 @@
 # Project definition
 A device that works with TTGO v1 storing the information it receives from various sensors, and sending the data via LoRa to a raspberry server that has nodered. 
 
-# Procedure
-To make easier the process of making this project, we have divided it in different parts. 
-
-## Materials
+# Materials
 To carry out this project we have used the following materials:
 
-### Components of the transmitter:
+## Components of the transmitter:
 
 · 2 Leds 
 
@@ -17,28 +14,27 @@ To carry out this project we have used the following materials:
 
 · [Gas sensor](https://www.smart-prototyping.com/MQ-9-carbon-monoxide,-combustible-gas-sensor-detection-alarm-module.html)
 
-### Modules:
+## Modules:
 
 · ESP32 Lilygo TTGO
 
 · ESP32 TTGO
 
-### Computer used to see the information:
+## Computer used to see the information:
 
 · Raspberry Pi 4
 
-### Softwares:
+## Softwares:
 
 · [Arduino IDE](https://www.arduino.cc/)
 
 · [Proteus](https://componentsearchengine.com/library/proteus?gclid=Cj0KCQiA3rKQBhCNARIsACUEW_aY6RcRdgSPUMMehsdv-Bzp3LncFmYT_sYbc0FBilARIvG0W2LUSLcaAgRlEALw_wcB)
 
 
-## Connections
-
+# Connections
 ![Image1](https://github.com/Ariadna2002/FLora-Comunica2/blob/main/Schematic.png)
 
-## Steps
+# Procedure
 
 1-The first thing we must do is the installation and programming in NodeRed because if we don't have the programming part done the receiver will not receive any data because it wont be connected to the raspberry (by MQTT) and will give us a failed message. To do this we will follow the steps in the "NodeRed" folder.
 
@@ -62,3 +58,5 @@ Finally, we adapted the "LoRaReceiver" program with our:
 -The IP address of the raspberry that we are using (mqtt_server)
 
 These are the steps to be followed only for the complete operation of the project. If you would like to add a PCB and a 3D design of a housing for this project, we have left the files for you to download. 
+
+# PCB 
