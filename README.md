@@ -40,7 +40,7 @@ To carry out this project we have used the following materials:
 
 ## Connections
 
-https://github.com/Ariadna2002/FLora-Comunica2/blob/main/Schematic.png
+![Image1](https://github.com/Ariadna2002/FLora-Comunica2/blob/main/Schematic.png)
 
 ## Steps
 
