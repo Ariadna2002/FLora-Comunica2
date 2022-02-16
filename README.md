@@ -43,7 +43,7 @@ To carry out this project we have used the following materials:
 
 ## Configuration of the Server in raspberry
 
-First of all, to start with the work we must have installed "Mosquitto Broker" in our raspberry. Here is a [tutorial](https://www.luisllamas.es/como-instalar-mosquitto-el-broker-mqtt/) for that. The installation and programming of nodered is a must, if we don't have the programming part done the receiver will not receive any data because it wont be connected to the raspberry (by MQTT) and will give us a failed message when we try the program in the ttgo. 
+First of all, to start with the work we must have installed "Mosquitto Broker" in our raspberry. Here is a [tutorial](https://domotuto.com/instalacion-de-mosquitto-mqtt-broker-en-raspberry-pi/) for that. The installation and programming of nodered is a must, if we don't have the programming part done the receiver will not receive any data because it wont be connected to the raspberry (by MQTT) and will give us a failed message when we try the program in the ttgo. 
 
 To install nodered, enter these 2 commands in the raspberry terminal:
 ```
