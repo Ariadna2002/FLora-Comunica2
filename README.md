@@ -49,11 +49,11 @@ First of all, to start with the work we must have installed "Mosquitto Broker" i
 
 To install nodered, enter these 2 commands in the raspberry terminal:
 ```
-- bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 ```
 and 
 ```
-- npm install node-red-dashboard
+npm install node-red-dashboard
 ```
 Once we have installed, we have to enter in the google browser the ip of the raspberry and the port, this will allow us to access nodered. Our configuration for everything to work is the following.
 ![Captura de pantalla 2022-02-16 131329](https://user-images.githubusercontent.com/99401726/154263679-7e6f2584-875b-4944-b4a6-73cab04c53bf.png)
