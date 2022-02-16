@@ -69,6 +69,7 @@ Then, we will load the 4 parts of the [LoraReceiver](https://github.com/Ariadna2
 For example: We create a new file as just explained, name it "Sender.h" and paste the "Sender.h" file to it. 
 It's as simple as that, and it should look like this: 
 
+![ExampleArd](https://user-images.githubusercontent.com/99756704/154371685-d238c0d4-1526-4ccf-8876-6862b56b2429.png)
 
 
 Finally, we adapt the "LoRaReceiver" program with our:
