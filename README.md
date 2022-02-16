@@ -9,11 +9,11 @@ To carry out this project we have used the following materials:
 
 ### Sensors:
 
-· KY-026 fire sensor
+· [Fire sensor - KY-026](https://hobbyking.com/es_es/keyes-flame-sensor-module-for-arduino.html?wrh_pdp=7&countrycode=ES&gclid=Cj0KCQiA3rKQBhCNARIsACUEW_a4FJTaPsVnPIupxuU-vIrrFga68_RIqFARL68YgrhCmGbWckRRJigaAnNfEALw_wcB)
 
-· GY-BMEP280 temperature/humidity/pressure sensor
+· [Temperature/humidity/pressure sensor - GY-BMEP280](https://es.aliexpress.com/item/1005003089223378.html?gatewayAdapt=glo2esp&_randl_currency=EUR&_randl_shipto=ES&src=google&aff_fcid=63d0ffc3a82642d5a0fcf167d65251ed-1645005589147-05136-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=63d0ffc3a82642d5a0fcf167d65251ed-1645005589147-05136-UneMJZVf&terminal_id=974d9b7ff4e5452b8d3eb89935d3f2a6)
 
-· Flying Fish gas sensor
+· [Gas sensor](https://www.smart-prototyping.com/MQ-9-carbon-monoxide,-combustible-gas-sensor-detection-alarm-module.html)
 
 ### Modules:
 
