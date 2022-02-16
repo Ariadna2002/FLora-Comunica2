@@ -84,9 +84,14 @@ Finally, we adapt the "LoRaReceiver" program with our:
 These are the steps to be followed only for the complete operation of the project. If you would like to add a PCB and a 3D design of a housing for this project, we have left the files for you to download. 
 
 # PCB
-These are the measures of the PCB. You can access to the file of proteus here
+
+These are the measures of the PCB. You can access to the file of proteus [here](https://github.com/Ariadna2002/FLora-Comunica2/tree/main/PCB)
 ![PCB_Measures](https://user-images.githubusercontent.com/99401726/154272115-1b235b42-591d-4f23-8a5a-90a7871810e9.png)
 ![PCB](https://user-images.githubusercontent.com/99401726/154272256-edac063f-e66f-4882-b84b-b3b09165d53c.jpeg)
 
 
 # 3D Design
+
+![Captura de pantalla 2022-02-16 194901](https://user-images.githubusercontent.com/99401726/154335043-8971227d-8918-4d3b-af6a-1447cf5d55f5.png)
+
+
