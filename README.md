@@ -2,7 +2,7 @@
 A device that works with TTGO v1 storing the information it receives from various sensors, and sending the data via LoRa to a raspberry server that has nodered. 
 ![ProjectWithNoCase](https://github.com/Ariadna2002/FLora-Comunica2/blob/main/Images/ProjectWithNoCase.jpeg)
 
-This project is composed of two "blocks", the first one a pcb with 3 sensors connected to a TTGO, and the second one a Lilygo connected to a raspberry. Both are transreceivers, since the TTGO sends the information it collects from the sensors and sends it to the lilygo board, but also receives information from it to use its actuators, which in our case is a led that can be turned off remotely from the nodered GUI.
+This project is composed of two "blocks", the first one a pcb with 3 sensors connected to a TTGO, and the second one a Lilygo connected to a raspberry. Both are transreceivers, since the TTGO sends the information it collects from the sensors and sends it to the lilygo board, but also receives information from it to use its actuators, which in our case is a led that can be turned off remotely from the nodered GUI. The green led just indicates if the Nodered is on.
 
 This repository contains all the information needed to make both transreceivers.
 
@@ -51,7 +51,14 @@ and
 ```
 - npm install node-red-dashboard
 ```
-Once we have installed, we have to enter in the google browser the ip of the raspberry and the port.
+Once we have installed, we have to enter in the google browser the ip of the raspberry and the port, this will allow us to access nodered. Our configuration for everything to work is the following.
+![Captura de pantalla 2022-02-16 131329](https://user-images.githubusercontent.com/99401726/154263679-7e6f2584-875b-4944-b4a6-73cab04c53bf.png)
+
+Every node must be also configured. 
+
+## Assembly of the transmitter
+
+Following the diagram in the connection section, we will connect all the sensors to the ttgo, and we will insert the program of 
 
 
 # Procedure
