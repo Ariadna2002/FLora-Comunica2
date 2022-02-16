@@ -43,6 +43,13 @@ To carry out this project we have used the following materials:
 
 First of all, to start with the work we must have installed "Mosquitto Broker" in our raspberry. Here is a [tutorial](https://www.luisllamas.es/como-instalar-mosquitto-el-broker-mqtt/) for that. The installation and programming of nodered is a must, if we don't have the programming part done the receiver will not receive any data because it wont be connected to the raspberry (by MQTT) and will give us a failed message when we try the program in the ttgo. 
 
+To install nodered, enter these 2 commands in the raspberry terminal:
+```
+- bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+- npm install node-red-dashboard
+
+```
+Once we have installed, we have to enter in the google browser the ip of the raspberry and the port.
 
 
 # Procedure
