@@ -62,31 +62,29 @@ Every node must be also configured.
 
 Following the diagram in the connection section, we will connect all the sensors and both leds to the TTGO. For the program to work it must detect the BME280 sensor. Then we will load the program [LoraSender](https://github.com/Ariadna2002/FLora-Comunica2/tree/main/LoRaSender). Once the program is on the TTGO board, it shouldn't work, because the Receiver is not configured yet.
 
-Then, we will load the 4 parts of the [LoraReceiver](https://github.com/Ariadna2002/FLora-Comunica2/tree/main/LoRaReceiver) program in our Lilygo TTGO. In order to work, we must create four files in our Arduino IDE and paste the programs attached above with the exact names.  To do this Arduino IDE we will find an arrow at the top right, just below the serial monitor icon (a magnifying glass), and click "New tab". Then we will write the names as they are in the previously shared files. It should look like this. 
+Then, we will load the 4 parts of the [LoraReceiver](https://github.com/Ariadna2002/FLora-Comunica2/tree/main/LoRaReceiver) program in our Lilygo TTGO. In order to work, we must create four files in our Arduino IDE and paste the programs attached above with the exact names.  To do this Arduino IDE we will find an arrow at the top right, just below the serial monitor icon (a magnifying glass), and click "New tab". Then we will write the names as they are in the previously shared files.
 
-# Procedure
+For example: We create a new file as just explained, name it "Sender.h" and paste the "Sender.h" file to it. 
+It's as simple as that, and it should look like this: 
 
-1-The first thing we must do is the installation and programming in NodeRed because if we don't have the programming part done the receiver will not receive any data because it wont be connected to the raspberry (by MQTT) and will give us a failed message. To do this we will follow the steps in the "NodeRed" folder.
 
-2-Secondly, we must make the connections as shown in the image of "connections". For the program to work it must detect the BMEP280 sensor.
 
-3-The third thing to do is to load the "LoRaSender" program in our TTGO with the connections already made.
-
-4-The fourth step is to load the "LoRaReceiver" program in our Lilygo TTGO. To do this we must create four files in our Arduino IDE and paste the programs attached above with the exact names.
-To do this, in our Arduino IDE we will find an arrow at the top right, just below the serial monitor icon (a magnifying glass), and click "New tab". Then we will write the names as they are in the previously shared files.
-
-For example:
-We create a new file as just explained, name it "Sender.h" and paste the "Sender.h" file to it. 
-It's as simple as that.
-
-Finally, we adapted the "LoRaReceiver" program with our:
+Finally, we adapt the "LoRaReceiver" program with our:
 
 -Wifi name (ssid)
 
 -Password
 
--The IP address of the raspberry that we are using (mqtt_server)
+-The IP address of the raspberry that we are using (mqtt_server).
+
+
 
 These are the steps to be followed only for the complete operation of the project. If you would like to add a PCB and a 3D design of a housing for this project, we have left the files for you to download. 
 
-# PCB 
+# PCB
+These are the measures of the PCB. You can access to the file of proteus here
+![PCB_Measures](https://user-images.githubusercontent.com/99401726/154272115-1b235b42-591d-4f23-8a5a-90a7871810e9.png)
+![PCB](https://user-images.githubusercontent.com/99401726/154272256-edac063f-e66f-4882-b84b-b3b09165d53c.jpeg)
+
+
+# 3D Design
