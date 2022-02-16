@@ -29,12 +29,21 @@ To carry out this project we have used the following materials:
 
 ## Softwares:
 
-· [Arduino IDE](https://www.arduino.cc/)
+· Programation: [Arduino IDE](https://www.arduino.cc/)
+· PCB Designs: [Proteus](https://componentsearchengine.com/library/proteus?gclid=Cj0KCQiA3rKQBhCNARIsACUEW_aY6RcRdgSPUMMehsdv-Bzp3LncFmYT_sYbc0FBilARIvG0W2LUSLcaAgRlEALw_wcB)
+· 3D designs: [Tinkercad](https://www.tinkercad.com/dashboard)
 
-· [Proteus](https://componentsearchengine.com/library/proteus?gclid=Cj0KCQiA3rKQBhCNARIsACUEW_aY6RcRdgSPUMMehsdv-Bzp3LncFmYT_sYbc0FBilARIvG0W2LUSLcaAgRlEALw_wcB)
 
 # Connections of the transmitter
 ![Image1](https://github.com/Ariadna2002/FLora-Comunica2/blob/main/Schematic.png)
+
+# Procedure 
+
+## Configuration of the Server in raspberry
+
+First of all, to start with the work we must have installed "Mosquitto Broker" in our raspberry. Here is a [tutorial](https://www.luisllamas.es/como-instalar-mosquitto-el-broker-mqtt/) for that. The installation and programming of nodered is a must, if we don't have the programming part done the receiver will not receive any data because it wont be connected to the raspberry (by MQTT) and will give us a failed message when we try the program in the ttgo. 
+
+
 
 # Procedure
 
