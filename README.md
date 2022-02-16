@@ -7,7 +7,9 @@ To make easier the process of making this project, we have divided it in differe
 ## Materials
 To carry out this project we have used the following materials:
 
-### Sensors:
+### Components of the transmitter:
+
+· 2 Leds 
 
 · [Fire sensor - KY-026](https://hobbyking.com/es_es/keyes-flame-sensor-module-for-arduino.html?wrh_pdp=7&countrycode=ES&gclid=Cj0KCQiA3rKQBhCNARIsACUEW_a4FJTaPsVnPIupxuU-vIrrFga68_RIqFARL68YgrhCmGbWckRRJigaAnNfEALw_wcB)
 
@@ -25,17 +27,11 @@ To carry out this project we have used the following materials:
 
 · Raspberry Pi 4
 
-### Software used for programming:
+### Softwares:
 
-· Arduino IDE
+· [Arduino IDE](https://www.arduino.cc/)
 
-### A part:
-
-· 2 LEDS
-
-· PCB
-
-· 3D Printer
+· [Proteus](https://componentsearchengine.com/library/proteus?gclid=Cj0KCQiA3rKQBhCNARIsACUEW_aY6RcRdgSPUMMehsdv-Bzp3LncFmYT_sYbc0FBilARIvG0W2LUSLcaAgRlEALw_wcB)
 
 
 ## Connections
@@ -44,9 +40,9 @@ To carry out this project we have used the following materials:
 
 ## Steps
 
-1-The first thing we must do is the installation and programming in NodeRed because if we do not have the programming part done the receiver will not receive any data because it will not be connected to the raspberry (by MQTT) and will give us a failed message. To do this we will follow the steps in the "NodeRed" folder.
+1-The first thing we must do is the installation and programming in NodeRed because if we don't have the programming part done the receiver will not receive any data because it wont be connected to the raspberry (by MQTT) and will give us a failed message. To do this we will follow the steps in the "NodeRed" folder.
 
-2-Secondly, we must make the connections found in the attached "Schematic" file above. For the program to work it must detect the BMEP280 sensor.
+2-Secondly, we must make the connections as shown in the image of "connections". For the program to work it must detect the BMEP280 sensor.
 
 3-The third thing to do is to load the "LoRaSender" program in our TTGO with the connections already made.
 
