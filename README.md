@@ -1,3 +1,5 @@
+![Ilustración_sin_título](https://user-images.githubusercontent.com/99401726/154334460-24138f31-9a9d-40b4-869c-5050c6baabe6.jpg)
+
 # Project definition
 A device that works with TTGO v1 storing the information it receives from various sensors, and sending the data via LoRa to a raspberry server that has nodered. 
 ![ProjectWithNoCase](https://github.com/Ariadna2002/FLora-Comunica2/blob/main/Images/ProjectWithNoCase.jpeg)
