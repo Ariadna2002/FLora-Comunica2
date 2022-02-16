@@ -58,7 +58,7 @@ Every node must be also configured.
 
 ## Assembly of the transmitter
 
-Following the diagram in the connection section, we will connect all the sensors to the ttgo, and we will insert the program of 
+Following the diagram in the connection section, we will connect all the sensors to the ttgo, and we will insert the program of [LoraSender](https://github.com/Ariadna2002/FLora-Comunica2/tree/main/LoRaSender) which is divided in 4 parts, but in the arduino must be entered in the same program, but in different tabs.
 
 
 # Procedure
